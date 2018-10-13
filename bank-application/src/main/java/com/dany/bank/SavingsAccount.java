@@ -1,6 +1,6 @@
 package com.dany.bank;
 
-public abstract class SavingsAccount extends BankAccount {
+public  class SavingsAccount extends BankAccount {
 	
 	 String accountType;
 
@@ -8,10 +8,22 @@ public abstract class SavingsAccount extends BankAccount {
 		return accountType;
 	}
 
+	
+
 	public SavingsAccount() {
-		
-		accountType = "Savings";
+		super();
+		// TODO Auto-generated constructor stub
 	}
+
+
+
+	public SavingsAccount( String accountHolderName,
+			double accountBalance) {
+		super(accountHolderName, accountBalance);
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 	@Override
 	public void withdraw(double amount){

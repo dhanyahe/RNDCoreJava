@@ -7,7 +7,7 @@ package com.dany.bank;
  *
  */
 
-public abstract class BankAccount {
+public  class BankAccount implements Comparable<BankAccount>{
 	
 	int accountNo;
 	String accountHolderName;
@@ -32,17 +32,23 @@ public abstract class BankAccount {
 		this.accountHolderName = accountHolderName;
 		this.accountBalance = accountBalance;
 	}
+	public BankAccount( String accountHolderName,
+			double accountBalance) {
+		super();
+		
+		
+		this.accountHolderName = accountHolderName;
+		this.accountBalance = accountBalance;
+	}
 	
-	
-	public void withdraw(double amount){
+	/*public void withdraw(double amount){
 		accountBalance-=amount;
 		
-	}
+	}*/
 	
 	public void deposit(double amount){
 		accountBalance+=amount;
 	}
-	
 	
 	
 	@Override
@@ -65,6 +71,13 @@ public abstract class BankAccount {
 	
 	public int getAccountNo() {
 		return accountNo;
+	}
+	@Override
+	public int compareTo(BankAccount account) {
+		
+		
+		
+		return account.getAccountNo()-getAccountNo();
 	}
 	
 	
