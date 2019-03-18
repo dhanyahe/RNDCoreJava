@@ -1,0 +1,62 @@
+An API gateway
+is programming that sits in front of an application programming interface (API) and acts as a single point of entry for a defined group of microservices. 
+
+An edge service 
+is a component which is exposed to the public internet. It acts as a gateway to all other services, which we will refer to as platform services. 
+
+API
+a software intermediary that allows two applications to talk to each other.
+When you use an application on your mobile phone, the application connects to the Internet and sends data to a server. The server then retrieves that data, interprets it, performs the necessary actions and sends it back to your phone. The application then interprets that data and presents you with the information you wanted in a readable way. This is what an API is - all of this happens via API.
+
+To explain this better, let us take a familiar example.
+
+Imagine you’re sitting at a table in a restaurant with a menu of choices to order from. The kitchen is the part of the “system” that will prepare your order. What is missing is the critical link to communicate your order to the kitchen and deliver your food back to your table. That’s where the waiter or API comes in. The waiter is the messenger – or API – that takes your request or order and tells the kitchen – the system – what to do. Then the waiter delivers the response back to you; in this case, it is the food.
+
+What is hystrix?
+
+Hystrix is a library developed by Netflix and is part of Spring via the Spring Cloud Netflix project.
+Hystrix is a fault tolerance library and is used as strategy against failures (at different levels) in a service-layer.
+
+Why do we use Hystrix?
+
+Hystrix can be used in situations where your application depends on remote services.
+In case one or more remote services are down you can handle the situation by using a circuit breaker in your application.
+
+Hystrix is a library that helps you control the interactions between these distributed services by adding latency tolerance and fault tolerance logic.
+Hystrix does this by isolating points of access between the services, stopping cascading failures across them, and providing fallback options, all of which 
+improve your system’s overall resiliency.
+
+What does it do?
+
+1) Latency and Fault Tolerance Stop cascading failures. Fallbacks and graceful degradation. Fail fast and rapid recovery. 
+Thread and semaphore isolation with circuit breakers.
+
+2) Realtime Operations Realtime monitoring and configuration changes. 
+Watch service and property changes take effect immediately as they spread across a fleet.Be alerted, make decisions, affect change and see results in seconds.
+
+3) Concurrency Parallel execution. Concurrency aware request caching. 
+Automated batching through request collapsing.
+
+
+The @RestController annotation in Spring MVC is nothing but a combination of the @Controller and the @ResponseBody annotation.
+If you are familiar with the REST web services you know that the fundamental difference between a web application and a REST API is that 
+the response from a web application is a generally view of HTML + CSS + JavaScript while REST API just return data in form of JSON or XML.
+The job of the @Controller is to create a Map of model object and find a view but the 
+@RestController simply returns the object and object data is directly written into HTTP response as JSON or XML.
+
+
+
+
+
+Web Service :- In simple terms a web service is a function that can be accessed by other programs over the web (Http).
+So For example:
+I can go to Google Maps, and type in my home address, and see a map of where I live in my browser.
+But what if you were writing a computer program where you wanted to take an address and show a pretty map, just like Google maps?
+Well, you could write a whole new mapping program from scratch, OR you could call a web service that Google maps provides, 
+send it the address, and it will return a graphical map of the location, which you can display in your program.
+
+
+
+
+
+
